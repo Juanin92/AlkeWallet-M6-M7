@@ -2,7 +2,6 @@ package com.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.extern.apachecommons.CommonsLog;
 
 @Entity
 @Table(name = "accounts")
