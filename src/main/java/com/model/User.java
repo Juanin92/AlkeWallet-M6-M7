@@ -21,15 +21,15 @@ public class User {
 	@Column(name = "user_id")
 	private int user_id;
 
-	@Column(name = "user_name", nullable = false, length = 20)
+	@Column(name = "user_name")
 	private String user_name;
 
-	@Column(name = "user_surname", nullable = false, length = 40)
+	@Column(name = "user_surname")
 	private String user_surname;
 
-	@Column(name = "email", unique = true, nullable = false, length = 50)
+	@Column(name = "email")
 	private String email;
 
-	@Column(name = "password", nullable = false, length = 6)
+	@Column(name = "password")
 	private String password;
 }
