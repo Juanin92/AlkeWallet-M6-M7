@@ -14,7 +14,7 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers("/register", "/login").permitAll()
+                        .requestMatchers("/register", "/login", "/user").permitAll() // Agregamos "/user" para el formulario de creación de usuario
                         .anyRequest().authenticated()
                 )
                 .formLogin(formLogin -> formLogin
