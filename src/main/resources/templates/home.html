@@ -20,11 +20,11 @@
     <section>
         <div id="header">
             <h2>Menú Principal</h2>
-            <p>Bienvenido <p id="userNameHeader" th:text="${user.user_name}>User</p></p>
+            <p>Bienvenido <span id="userNameHeader" th:text="${user.user_name}">User</span></p>
         </div>
-        <div class="form-group">
+        <div class="form-group" >
             <p>Tienes en tu Cuenta: </p>
-            <h3 id="h3">$ <span id="balanceMenu" th:text="${account.balance}>0</span></h3>
+            <h3 id="h3">$ <span id="balanceMenu" th:text="${account.balance}">0</span></h3>
             <a id="hideButton" title="Ocultar Saldo"><i class='bx bx-hide'></i></a>
         </div>
         <div id="button">

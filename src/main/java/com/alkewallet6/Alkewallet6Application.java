@@ -9,5 +9,4 @@ public class Alkewallet6Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Alkewallet6Application.class, args);
 	}
-
 }
