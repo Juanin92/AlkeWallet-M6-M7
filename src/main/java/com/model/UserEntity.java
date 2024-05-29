@@ -14,18 +14,18 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class User {
+public class UserEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
-	private int user_id;
+	private int useId;
 
 	@Column(name = "user_name")
-	private String user_name;
+	private String userName;
 
 	@Column(name = "user_surname")
-	private String user_surname;
+	private String userSurname;
 
 	@Column(name = "email")
 	private String email;

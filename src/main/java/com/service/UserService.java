@@ -1,14 +1,14 @@
 package com.service;
 
-import com.model.User;
+import com.model.UserEntity;
 import com.repository.UserRepository;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
-@Transactional
-public class UserService {
+public class UserService implements IUserService {
 
     @Autowired
     private final UserRepository userRepository;
@@ -17,25 +17,30 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User findByUserId(int id){
-        return userRepository.findByUserId(id);
+    @Override
+    public Optional<UserEntity> findByUserId(int id){
+        return userRepository.findById(id);
     }
 
-    public User findByUser(String email,String password){
+    @Override
+    public UserEntity findByUser(String email, String password){
         return userRepository.findByUser(email,password);
     }
 
-    public User findByEmail(String email){
+    @Override
+    public UserEntity findByEmail(String email){
         return userRepository.findByEmail(email);
     }
 
-    public void saveUser(User user){
-        User log = userRepository.findByEmail(user.getEmail());
+    @Override
+    public UserEntity saveUser(UserEntity userEntity){
+        UserEntity log = userRepository.findByEmail(userEntity.getEmail());
 
         if (log == null){
-            userRepository.save(user);
+            userRepository.save(userEntity);
         }else{
             throw new IllegalArgumentException("El usuario ya existe");
         }
+        return log;
     }
 }

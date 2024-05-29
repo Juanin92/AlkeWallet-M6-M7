@@ -30,5 +30,5 @@ public class Account {
 
     @ManyToOne
     @JoinColumn(name = "user_id",referencedColumnName = "user_id", nullable = false)
-    private User user;
+    private UserEntity userEntity;
 }

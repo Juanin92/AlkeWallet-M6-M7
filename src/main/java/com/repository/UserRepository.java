@@ -1,13 +1,18 @@
 package com.repository;
 
-import com.model.User;
+import com.model.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository <User, Integer> {
+public interface UserRepository extends JpaRepository <UserEntity, Integer> {
 
-    public User findByUser(String email,String password);
-    public User findByUserId(int id);
-    public User findByEmail(String email);
+    //userentity se usa nativequery=false usa lenguaje jpql
+    @Query("SELECT u FROM UserEntity u WHERE u.email = :email AND  u.password = :password")
+    public UserEntity findByUser(String email, String password);
+
+    //es con navtiquery
+    @Query(value = "SELECT * FROM users WHERE email = :email", nativeQuery = true)
+    public UserEntity findByEmail(String email);
 }
