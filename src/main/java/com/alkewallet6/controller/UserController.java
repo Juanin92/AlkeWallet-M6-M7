@@ -1,21 +1,20 @@
-package com.controller;
+package com.alkewallet6.controller;
 
-import com.model.UserEntity;
-import com.service.IUserService;
-import com.service.UserService;
+import com.alkewallet6.model.UserEntity;
+import com.alkewallet6.service.IUserService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
+@RequiredArgsConstructor
 public class UserController {
 
     @Autowired
-    private IUserService userService;
+    private final IUserService userService;
 
     /*@GetMapping("/{id}")
     public ResponseEntity<UserEntity> getUserById(@PathVariable int id) {

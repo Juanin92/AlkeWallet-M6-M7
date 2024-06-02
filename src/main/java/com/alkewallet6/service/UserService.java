@@ -1,7 +1,7 @@
-package com.service;
+package com.alkewallet6.service;
 
-import com.model.UserEntity;
-import com.repository.UserRepository;
+import com.alkewallet6.model.UserEntity;
+import com.alkewallet6.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

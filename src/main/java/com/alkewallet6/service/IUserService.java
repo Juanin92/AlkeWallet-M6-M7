@@ -1,6 +1,6 @@
-package com.service;
+package com.alkewallet6.service;
 
-import com.model.UserEntity;
+import com.alkewallet6.model.UserEntity;
 
 import java.util.Optional;
 

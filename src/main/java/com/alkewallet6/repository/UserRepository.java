@@ -1,6 +1,6 @@
-package com.repository;
+package com.alkewallet6.repository;
 
-import com.model.UserEntity;
+import com.alkewallet6.model.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

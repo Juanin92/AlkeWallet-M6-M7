@@ -1,7 +1,7 @@
-package com.service;
+package com.alkewallet6.service;
 
-import com.model.Account;
-import com.repository.AccountRepository;
+import com.alkewallet6.model.Account;
+import com.alkewallet6.repository.AccountRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
-public class AccountService implements IAccountService{
+public class AccountService implements IAccountService {
 
     private static final double surcharge = 300.00;
     private static final double usdValue = 908.79;

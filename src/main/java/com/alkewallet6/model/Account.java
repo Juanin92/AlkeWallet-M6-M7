@@ -1,4 +1,4 @@
-package com.model;
+package com.alkewallet6.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
