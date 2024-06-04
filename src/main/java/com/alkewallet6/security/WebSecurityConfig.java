@@ -15,7 +15,7 @@ public class WebSecurityConfig {
         http
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
                         .requestMatchers("/register", "/login", "/user").permitAll() // Agregamos "/user" para el formulario de creación de usuario
-                        .requestMatchers("/", "/home.html", "/css/**", "/js/**").permitAll()
+                        .requestMatchers("/", "/home.html", "/CSS/**", "/JS/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(formLogin -> formLogin
