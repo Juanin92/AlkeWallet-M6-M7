@@ -1,13 +1,13 @@
 $(document).ready(function () {
     const balanceSpan = $("#balanceMenu");
-    let RealBalance = balanceSpan.text();
+    let realBalance = balanceSpan.text();
 
     $('#hideButton').on('click', function() {
         if (balanceSpan.text() === "*****") {
             balanceSpan.text(realBalance);
         } else {
             realBalance = balanceSpan.text();
-            balanceSpan.text("*****"); /
+            balanceSpan.text("*****");
         }
     });
 
